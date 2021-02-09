@@ -27,7 +27,8 @@ function pipe_icons(material)
   }
 }
 end
-  function bob_strpictures(material) --litearlly lifted from bobs_logistics/prototypes/entity/pipes.lua then tweaked to be split into the 3 variants
+
+function bob_strpictures(material) --litearlly lifted from bobs_logistics/prototypes/entity/pipes.lua then tweaked to be split into the 3 variants
   return
 {
     straight_vertical =
@@ -62,6 +63,7 @@ end
     },
   }
 end
+
 function bob_elbpictures(material) --litearlly lifted from bobs_logistics/prototypes/entity/pipes.lua then tweaked to be split into the 3 variants
   return
   {
@@ -127,6 +129,7 @@ function bob_elbpictures(material) --litearlly lifted from bobs_logistics/protot
     }
   }
 end
+
 function bob_teepictures(material) --litearlly lifted from bobs_logistics/prototypes/entity/pipes.lua then tweaked to be split into the 3 variants
   return
   {
@@ -192,6 +195,7 @@ function bob_teepictures(material) --litearlly lifted from bobs_logistics/protot
     }
   }
 end
+
 function bob_pipecoverspictures(material)
   return
   {
@@ -479,6 +483,7 @@ do
         -- entity.icon / item.icon
         new_pipes[value].entity.icon = pic1..p[key]
         new_pipes[value].item.icon   = pic1..p[key]
+        new_pipes[value].recipe.icon = pic1..p[key]
         -- entity.minable.result
         new_pipes[value].entity.minable.result = m[key]
         -- recipe.ingredients
@@ -605,30 +610,30 @@ do
         end
       end
       -- Add to appropriate technologies (based on when they unlock in bobplates_0.14.0\prototypes\technology*.lua)
-      addTech("steel-processing",    "pipe-steel-straight")
-      addTech("steel-processing",    "pipe-steel-junction")
-      addTech("steel-processing",    "pipe-steel-elbow")
-      addTech("ceramics",            "pipe-ceramic-straight")
-      addTech("ceramics",            "pipe-ceramic-junction")
-      addTech("ceramics",            "pipe-ceramic-elbow")
-      addTech("plastics",            "pipe-plastic-straight")
-      addTech("plastics",            "pipe-plastic-junction")
-      addTech("plastics",            "pipe-plastic-elbow")
-      addTech("alloy-processing", "pipe-bronze-straight")
-      addTech("alloy-processing", "pipe-bronze-junction")
-      addTech("alloy-processing", "pipe-bronze-elbow")
-      addTech("zinc-processing",     "pipe-brass-straight")
-      addTech("zinc-processing",     "pipe-brass-junction")
-      addTech("zinc-processing",     "pipe-brass-elbow")
-      addTech("titanium-processing", "pipe-titanium-straight")
-      addTech("titanium-processing", "pipe-titanium-junction")
-      addTech("titanium-processing", "pipe-titanium-elbow")
-      addTech("tungsten-processing", "pipe-tungsten-straight")
-      addTech("tungsten-processing", "pipe-tungsten-junction")
-      addTech("tungsten-processing", "pipe-tungsten-elbow")
-      addTech("nitinol-processing", "pipe-nitinol-straight")
-      addTech("nitinol-processing", "pipe-nitinol-junction")
-      addTech("nitinol-processing", "pipe-nitinol-elbow")
+      addTech("steel-processing",          "pipe-steel-straight")
+      addTech("steel-processing",          "pipe-steel-junction")
+      addTech("steel-processing",          "pipe-steel-elbow")
+      addTech("ceramics",                  "pipe-ceramic-straight")
+      addTech("ceramics",                  "pipe-ceramic-junction")
+      addTech("ceramics",                  "pipe-ceramic-elbow")
+      addTech("plastics",                  "pipe-plastic-straight")
+      addTech("plastics",                  "pipe-plastic-junction")
+      addTech("plastics",                  "pipe-plastic-elbow")
+      addTech("alloy-processing",          "pipe-bronze-straight")
+      addTech("alloy-processing",          "pipe-bronze-junction")
+      addTech("alloy-processing",          "pipe-bronze-elbow")
+      addTech("zinc-processing",           "pipe-brass-straight")
+      addTech("zinc-processing",           "pipe-brass-junction")
+      addTech("zinc-processing",           "pipe-brass-elbow")
+      addTech("titanium-processing",       "pipe-titanium-straight")
+      addTech("titanium-processing",       "pipe-titanium-junction")
+      addTech("titanium-processing",       "pipe-titanium-elbow")
+      addTech("tungsten-processing",       "pipe-tungsten-straight")
+      addTech("tungsten-processing",       "pipe-tungsten-junction")
+      addTech("tungsten-processing",       "pipe-tungsten-elbow")
+      addTech("nitinol-processing",        "pipe-nitinol-straight")
+      addTech("nitinol-processing",        "pipe-nitinol-junction")
+      addTech("nitinol-processing",        "pipe-nitinol-elbow")
       addTech("tungsten-alloy-processing", "pipe-copper-tungsten-straight")
       addTech("tungsten-alloy-processing", "pipe-copper-tungsten-junction")
       addTech("tungsten-alloy-processing", "pipe-copper-tungsten-elbow")
